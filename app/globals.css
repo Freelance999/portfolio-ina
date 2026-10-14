@@ -1,26 +1,217 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap");
+
+@theme {
+  --color-bg-primary: #FAF6F0;
+  --color-bg-surface: #F2EAE1;
+  --color-card-surface: #FFFFFF;
+  --color-text-primary: #2C1E16;
+  --color-text-secondary: #6E5A4F;
+  --color-border-subtle: #E6DCD2;
+  --color-border-hover: #A68976;
+
+  --color-primary: #61412d;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #7b5843;
+  --color-on-primary-container: #ffd1b8;
+  --color-primary-fixed: #ffdbc8;
+  --color-primary-fixed-dim: #ebbda3;
+  --color-on-primary-fixed: #2d1506;
+  --color-on-primary-fixed-variant: #5f402c;
+  --color-inverse-primary: #ebbda3;
+
+  --color-secondary: #725948;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fbd9c3;
+  --color-on-secondary-container: #775d4c;
+  --color-secondary-fixed: #fedcc6;
+  --color-secondary-fixed-dim: #e1c0ab;
+  --color-on-secondary-fixed: #29180a;
+  --color-on-secondary-fixed-variant: #594232;
+
+  --color-tertiary: #4d4740;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #665f57;
+  --color-on-tertiary-container: #e3d9cf;
+  --color-tertiary-fixed: #ebe1d7;
+  --color-tertiary-fixed-dim: #cec5bb;
+  --color-on-tertiary-fixed: #1f1b15;
+  --color-on-tertiary-fixed-variant: #4c463f;
+
+  --color-surface: #fff8f5;
+  --color-surface-dim: #efd5c8;
+  --color-surface-bright: #fff8f5;
+  --color-surface-variant: #f7ddd0;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fff1eb;
+  --color-surface-container: #ffeadf;
+  --color-surface-container-high: #fde3d6;
+  --color-surface-container-highest: #f7ddd0;
+  --color-on-surface: #261911;
+  --color-on-surface-variant: #50443e;
+  --color-inverse-surface: #3d2d24;
+  --color-inverse-on-surface: #ffede5;
+  --color-surface-tint: #795742;
+
+  --color-outline: #82746d;
+  --color-outline-variant: #d4c3bb;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --spacing-margin: 3rem;
+  --spacing-margin-mobile: 1.5rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-plus-jakarta: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-dm-sans: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAF6F0;
+  color: #2C1E16;
+  font-family: var(--font-dm-sans);
+}
+
+::selection {
+  background-color: #fbd9c3;
+  color: #775d4c;
+}
+
+.font-display {
+  font-family: var(--font-plus-jakarta);
+}
+.text-display {
+  font-size: 3.5rem;
+  line-height: 4.25rem;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .text-display {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    letter-spacing: -0.02em;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.font-headline-lg {
+  font-family: var(--font-plus-jakarta);
+}
+.text-headline-lg {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .text-headline-lg {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    letter-spacing: -0.015em;
+  }
+}
+
+.font-headline-md {
+  font-family: var(--font-plus-jakarta);
+}
+.text-headline-md {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.font-headline-sm {
+  font-family: var(--font-plus-jakarta);
+}
+.text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.font-title-md {
+  font-family: var(--font-plus-jakarta);
+}
+.text-title-md {
+  font-size: 1.125rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+}
+
+.font-body-lg {
+  font-family: var(--font-dm-sans);
+}
+.text-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+
+.font-body-md {
+  font-family: var(--font-dm-sans);
+}
+.text-body-md {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+}
+
+.font-body-sm {
+  font-family: var(--font-dm-sans);
+}
+.text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+
+.font-label-md {
+  font-family: var(--font-plus-jakarta);
+}
+.text-label-md {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+.font-label-sm {
+  font-family: var(--font-plus-jakarta);
+}
+.text-label-sm {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
 }
