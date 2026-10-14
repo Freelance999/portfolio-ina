@@ -19,48 +19,48 @@ export default function OrganisationalExperience() {
   ];
 
   return (
-    <section className="w-full py-space-xl bg-bg-surface/40" id="organisasi">
+    <section className="w-full py-16 lg:py-24 bg-bg-surface/40 scroll-mt-24" id="organisasi">
       <div className="max-w-300 mx-auto px-margin-mobile lg:px-margin">
-        <div className="max-w-2xl mb-space-lg space-y-space-xs">
-          <div className="inline-flex items-center gap-1 text-primary-container font-label-sm text-label-sm uppercase tracking-wider font-bold">
+        <div className="max-w-2xl mb-10 lg:mb-14 space-y-3">
+          <div className="inline-flex items-center gap-1.5 text-primary-container font-label-sm text-label-sm uppercase tracking-wider font-bold">
             <span className="material-symbols-outlined text-base">groups</span>
             <span>Leadership Track</span>
           </div>
-          <h2 className="font-headline-lg text-headline-lg text-text-primary font-bold">
+          <h2 className="font-headline-lg text-headline-lg text-text-primary font-bold tracking-tight">
             Pengalaman Organisasi &amp; Kepemimpinan
           </h2>
-          <p className="font-body-md text-body-md text-text-secondary">
+          <p className="font-body-md text-body-md text-text-secondary leading-relaxed">
             Pengalaman kepengurusan aktif dalam merancang tata kelola administrasi kegiatan, proposal, dan sinergi tim.
           </p>
         </div>
-        <div className="bg-card-surface rounded-xl border-y border-r border-border-subtle border-l-4 border-l-primary-container shadow-sm hover:shadow-md transition-shadow p-space-md sm:p-space-xl">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md border-b border-border-subtle mb-space-lg">
+        <div className="bg-card-surface rounded-2xl border-y border-r border-border-subtle border-l-4 border-l-primary-container shadow-sm hover:shadow-md transition-shadow p-6 sm:p-8 lg:p-10">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-border-subtle mb-8">
             <div>
-              <div className="flex items-center gap-2 mb-1">
-                <span className="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+              <div className="flex items-center gap-2.5 mb-2">
+                <span className="px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
                   Divisi Kewirausahaan
                 </span>
-                <span className="text-text-secondary text-sm font-semibold">• 2 Tahun Periode</span>
+                <span className="text-text-secondary text-sm font-medium">• 2 Tahun Periode</span>
               </div>
-              <h3 className="font-headline-md text-headline-md text-text-primary font-bold">
+              <h3 className="font-headline-md text-headline-md text-text-primary font-bold tracking-tight mb-1">
                 Deputy of Entrepreneurship Division
               </h3>
               <p className="font-title-md text-title-md text-primary font-medium">
                 Himpunan Mahasiswa Manajemen
               </p>
             </div>
-            <div className="flex items-center gap-2 text-text-secondary font-label-md text-label-md bg-bg-surface px-4 py-2 rounded-full border border-border-subtle self-start lg:self-auto shrink-0">
+            <div className="flex items-center gap-2 text-text-secondary font-label-md text-label-md bg-bg-surface px-4 py-2 rounded-full border border-border-subtle self-start lg:self-auto shrink-0 shadow-2xs">
               <span className="material-symbols-outlined text-primary-container text-lg">date_range</span>
               <span>Oktober 2022 – Oktober 2024</span>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {highlights.map((item) => (
               <div
                 key={item.icon}
-                className="flex items-start gap-space-sm p-3.5 rounded-lg bg-bg-primary/70 border border-border-subtle/80 hover:bg-bg-primary transition-colors"
+                className="flex items-start gap-4 p-5 sm:p-6 rounded-xl bg-bg-primary/70 border border-border-subtle/80 hover:bg-bg-primary transition-colors"
               >
-                <div className="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-primary-container shrink-0 mt-0.5">
+                <div className="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-primary-container shrink-0 mt-0.5">
                   <span className="material-symbols-outlined text-base">{item.icon}</span>
                 </div>
                 <p className="font-body-md text-body-md text-text-secondary leading-relaxed">

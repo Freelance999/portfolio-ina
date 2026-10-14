@@ -24,22 +24,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-text-primary text-bg-primary pt-space-xl pb-space-lg mt-space-xl" id="kontak">
+    <footer className="w-full bg-text-primary text-bg-primary pt-16 sm:pt-20 pb-12 mt-16 lg:mt-24 scroll-mt-24" id="kontak">
       <div className="max-w-300 mx-auto px-margin-mobile lg:px-margin">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter pb-space-xl border-b border-white/10">
-          <div className="md:col-span-6 space-y-space-sm">
-            <h3 className="font-headline-md text-headline-md text-bg-primary font-bold">
-              Mufliha Sobrina Syah
-            </h3>
-            <p className="font-body-md text-body-md text-tertiary-fixed max-w-md leading-relaxed">
-              Executive Administrator &amp; Operational Specialist. Dedikasi tinggi pada manajemen presisi, tata kelola korporat, dan keunggulan administratif.
-            </p>
-          </div>
-          <div className="md:col-span-3 space-y-space-sm">
-            <h4 className="font-title-md text-title-md text-secondary-fixed font-semibold">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 lg:gap-12 pb-12 sm:pb-16 border-b border-white/10">
+          <div className="sm:col-span-1 md:col-span-5 lg:col-span-4 space-y-4">
+            <h4 className="font-title-md text-title-md text-secondary-fixed font-semibold tracking-wide">
               Navigasi Portfolio
             </h4>
-            <ul className="space-y-space-xs font-body-sm text-body-sm text-tertiary-fixed">
+            <ul className="space-y-2.5 font-body-sm text-body-sm text-tertiary-fixed">
               {navLinks.map((link) => (
                 <li key={link.id}>
                   <a
@@ -48,7 +40,7 @@ export default function Footer() {
                       e.preventDefault();
                       scrollTo(link.id);
                     }}
-                    className="hover:text-bg-primary transition-colors"
+                    className="hover:text-bg-primary transition-colors inline-block py-1"
                   >
                     {link.label}
                   </a>
@@ -56,17 +48,17 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          <div className="md:col-span-3 space-y-space-sm">
-            <h4 className="font-title-md text-title-md text-secondary-fixed font-semibold">
+          <div className="sm:col-span-1 md:col-span-7 lg:col-span-6 space-y-4">
+            <h4 className="font-title-md text-title-md text-secondary-fixed font-semibold tracking-wide">
               Kontak
             </h4>
-            <ul className="space-y-space-xs font-body-sm text-body-sm text-tertiary-fixed">
+            <ul className="space-y-3 font-body-sm text-body-sm text-tertiary-fixed">
               <li>
                 <a
                   href="mailto:muflihasobrina4@gmail.com"
-                  className="hover:text-bg-primary transition-colors flex items-center gap-2"
+                  className="hover:text-bg-primary transition-colors flex items-center gap-3 py-1"
                 >
-                  <span className="material-symbols-outlined text-base text-secondary-fixed">mail</span>
+                  <span className="material-symbols-outlined text-lg text-secondary-fixed shrink-0">mail</span>
                   <span className="truncate">muflihasobrina4@gmail.com</span>
                 </a>
               </li>
@@ -75,9 +67,9 @@ export default function Footer() {
                   href="https://wa.me/6283174540095"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-bg-primary transition-colors flex items-center gap-2"
+                  className="hover:text-bg-primary transition-colors flex items-center gap-3 py-1"
                 >
-                  <span className="material-symbols-outlined text-base text-secondary-fixed">call</span>
+                  <span className="material-symbols-outlined text-lg text-secondary-fixed shrink-0">call</span>
                   <span>+62 831-7454-0095</span>
                 </a>
               </li>
@@ -86,12 +78,10 @@ export default function Footer() {
                   href="https://linkedin.com/in/mufliha-sobrina-syah"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-bg-primary transition-colors flex items-center gap-2"
+                  className="hover:text-bg-primary transition-colors flex items-center gap-3 py-1"
                 >
                   <svg
-                    className="size-6 text-secondary-fixed shrink-0"
-                    width={24}
-                    height={24}
+                    className="w-4 h-4 text-secondary-fixed shrink-0"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -101,14 +91,14 @@ export default function Footer() {
                   <span>LinkedIn Profile</span>
                 </a>
               </li>
-              <li className="flex items-center gap-2 pt-1 text-tertiary-fixed-dim">
-                <span className="material-symbols-outlined text-base text-secondary-fixed">location_on</span>
+              <li className="flex items-center gap-3 py-1 text-tertiary-fixed">
+                <span className="material-symbols-outlined text-lg text-secondary-fixed shrink-0">location_on</span>
                 <span>Bekasi, Indonesia</span>
               </li>
             </ul>
           </div>
         </div>
-        <div className="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm text-tertiary-fixed-dim font-body-sm text-body-sm">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-tertiary-fixed-dim font-body-sm text-body-sm">
           <p>© 2026 Mufliha Sobrina Syah</p>
           <p className="font-label-sm text-label-sm tracking-wide">
             Bekasi, Indonesia

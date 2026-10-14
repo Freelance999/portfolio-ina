@@ -56,7 +56,7 @@ export default function HeroSection() {
 
           </div>
           <div className="lg:col-span-5 flex justify-center lg:justify-end relative mt-space-lg lg:mt-0">
-            <div className="relative w-full max-w-44 sm:max-w-48">
+            <div className="relative w-full max-w-64 sm:max-w-72 lg:max-w-80">
               <div className="absolute -inset-3 rounded-2xl bg-linear-to-tr from-secondary-container via-surface-container to-bg-surface -rotate-2 scale-95 opacity-80 shadow-md pointer-events-none" />
               <div
                 className="relative rounded-2xl overflow-hidden bg-card-surface border-2 border-border-subtle shadow-xl aspect-square"
@@ -68,7 +68,7 @@ export default function HeroSection() {
                   fill
                   priority
                   className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
-                  sizes="(max-width: 640px) 176px, 192px"
+                  sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-text-primary/40 via-transparent to-transparent pointer-events-none" />
               </div>
